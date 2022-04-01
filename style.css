@@ -141,7 +141,7 @@ footer a {
     top: 0;
 
     width: 100vw;
-    height: 100vh;
+    height: 150vh;
 
     display: flex;
     justify-content: center;
@@ -151,7 +151,7 @@ footer a {
 
 
 #modal .content {
-    margin-top: 5px;
+    margin-top: 100px;
 
     color: white;
 }

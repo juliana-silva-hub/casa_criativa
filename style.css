@@ -24,7 +24,7 @@ p, .description {
 }
 
 #container {
-    width: 90%;
+    width: 80%;
     max-width: 980px;
 
     margin: 50px auto;
@@ -151,7 +151,7 @@ footer a {
 
 
 #modal .content {
-    margin-top: 128px;
+    margin-top: 5px;
 
     color: white;
 }

@@ -317,7 +317,7 @@ form button:hover {
 section#title {
     text-align: center;
 
-    margin: 64px 0;
+    margin-top: 64px 0;
 }
 
 section#title p {
@@ -340,4 +340,10 @@ section#ideas {
 
 section#ideas .idea {
     margin: 0;
+}
+
+section#title,
+section#ideas,
+footer {
+    margin-top: 64px;
 }

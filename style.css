@@ -1,4 +1,4 @@
-/* GLOBAL */
+    /* GLOBAL */
 
 body {
     background: #e5e5e5;
@@ -15,7 +15,6 @@ body.hideScroll {
 a {
     color: #ff5e84;
     font-weight: bold;
-    
     text-decoration: none;
 }
 
@@ -30,8 +29,8 @@ p, .description {
 }
 
 .button {
-    color: white;
     background: #ff5e84;
+    color: white;
 
     width: 150px;
     height: 40px;

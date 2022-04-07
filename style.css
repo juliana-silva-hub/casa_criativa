@@ -3,10 +3,9 @@
 body {
     background: #e5e5e5;
     color: #25282b;
+    margin: 0;
 
     font-family: 'Montserrat', sans-serif;
-
-    margin: 0;
 }
 
 body.hideScroll {
@@ -15,7 +14,6 @@ body.hideScroll {
 
 a {
     color: #ff5e84;
-    font-weight: bold;
     text-decoration: none;
 }
 
@@ -29,14 +27,17 @@ p, .description {
     letter-spacing: 0.1px;
 }
 
+.button:hover {
+    text-decoration: none;
+    background-color: #0984e3;  
+}
+
 .button {
-    background: #ff5e84;
     color: white;
+    background: #ff5e84;
 
     width: 150px;
     height: 40px;
-
-    border-radius: 8px;
 
     font-size: 14px;
     font-weight: bold;
@@ -44,14 +45,16 @@ p, .description {
     display: flex;
     align-items: center;
     justify-content: center;
-
+   
+    border-radius: 8px;
     box-shadow: 0px 8px 16px #ff5E8432;
 }
 
-.button:hover {
+#page-ideas nav li:last-child:hover a {
     background-color: #0984e3;
     text-decoration: none;
 }
+
 
 /* Padrão */
 
@@ -81,7 +84,6 @@ main{
 }
 
 button {
-    background: none;
     color:#ff5e84 ;
 
     border: none;
@@ -90,10 +92,9 @@ button {
     font-weight: bold;
     line-height: 18px;
     letter-spacing: 0.2px;
+    background: none;
 
     cursor: pointer;
-
-    outline: none;
 }
  
 button:hover {
@@ -152,7 +153,7 @@ footer a {
 #modal {
     background: #ff5e84;
 
-    position: absolute;
+    position: fixed;
     top: 0;
     bottom: 0;
     right: 0;
@@ -169,7 +170,7 @@ footer a {
 }
 
 #modal .content {
-    margin-top: 15%;
+    margin-top: 5%;
 
     color: white;
 }
@@ -249,6 +250,7 @@ form a:hover {
     
     text-decoration: none;
 }
+
 form button {
     background: white;
 
@@ -269,7 +271,6 @@ form button {
 
 form button:hover {
     background-color: #0984e3;
-
     color: white;
 
     text-decoration: none;
@@ -316,8 +317,6 @@ form button:hover {
 
 section#title {
     text-align: center;
-
-    margin-top: 64px 0;
 }
 
 section#title p {

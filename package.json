@@ -1,0 +1,25 @@
+{
+  "name": "potencia_tech_and_rocketseat",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/juliana-silva-hub/potencia_tech_and_rocketseat.git"
+  },
+  "keywords": [],
+  "author": "Juliana Silva",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/juliana-silva-hub/potencia_tech_and_rocketseat/issues"
+  },
+  "homepage": "https://github.com/juliana-silva-hub/potencia_tech_and_rocketseat#readme",
+  "dependencies": {
+    "express": "^4.17.3",
+    "nodemon": "^2.0.15"
+  }
+}

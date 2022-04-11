@@ -16,5 +16,6 @@ server.get("/", function(req, res) {
 server.get("/ideias", function(req, res) {
     return res.sendFile(__dirname + "/ideias.html")
 })
+
 // liguei meu servidor na porta 3000
 server.listen(3000)

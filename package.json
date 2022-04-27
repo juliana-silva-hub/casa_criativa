@@ -20,6 +20,7 @@
   "homepage": "https://github.com/juliana-silva-hub/potencia_tech_and_rocketseat#readme",
   "dependencies": {
     "express": "^4.17.3",
-    "nodemon": "^2.0.15"
+    "nodemon": "^2.0.15",
+    "sqlite3": "^5.0.6"
   }
 }

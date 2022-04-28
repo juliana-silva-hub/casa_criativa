@@ -5,6 +5,12 @@ const server = express()
 // configurar arquivos estáticos (css, scripts, imagens)
 server.use(express.static("public"))
 
+// configuração do nunjucks
+const nunjucks = require("nunjucks")
+nunjucks.configure("views", {
+    express: server,
+})
+
 // criei uma rota/
 // e capturo o pedido do cliente para responder
 server.get("/", function(req, res) {

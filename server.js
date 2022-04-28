@@ -1,5 +1,6 @@
 // usei o express pra criar e configurar meu servidor
 const express = require("express")
+const { format } = require("express/lib/response")
 const server = express()
 
 
@@ -52,11 +53,20 @@ nunjucks.configure("views", {
 // criei uma rota/
 // e capturo o pedido do cliente para responder
 server.get("/", function(req, res) {
-    return res.render("/index.html")
+
+    let lastIdeas = []
+    for(let idea of ideas.reverse()) {
+       if(lastIdeas.length < 2) {
+           lastIdeas.push(idea)
+        }
+    }
+
+    return res.render("/index.html", { ideas: lastIdeas })
 })
 
 server.get("/ideias", function(req, res) {
-    return res.render("/ideias.html")
+    
+    return res.render("/ideias.html", { ideas: ideas.reverse()})
 })
 
 // liguei meu servidor na porta 3000

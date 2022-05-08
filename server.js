@@ -63,14 +63,14 @@ server.get("/", function(req, res) {
         }
     }
 
-    return res.render("/index.html", { ideas: lastIdeas })
+    return res.render("../views/index.html", { ideas: lastIdeas })
 })
 
 server.get("/ideias", function(req, res) {
 
     const reversedIdeas = [...ideas].reverse()
 
-    return res.render("/ideias.html", { ideas: reversedIdeas()})
+    return res.render("../views/ideias.html", { ideas: reversedIdeas()})
 })
 
 // liguei meu servidor na porta 3000

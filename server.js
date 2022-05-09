@@ -1,43 +1,39 @@
 // usei o express pra criar e configurar meu servidor
 const express = require("express")
-const { format } = require("express/lib/response")
 const server = express()
 
+const db = require("./db")
 
-const ideas = [
-    {
-        img: "/img/worker.png",
-        title: "Cursos de Programação",
-        category: "Estudo",
-        description: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi sit quia voluptatem",
-        url: "https://rocketseat.com.br"
-    },
+//const ideas = [
+//    {
+//        
+//    },
+//
+//    {
+//       img: "/img/treino.png",
+//        title: "Exercícios",
+//       category: "Saúde",
+//       description: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi sit quia voluptatem",
+//        url: "https://www.queimadiaria.com/"
+//    },
+//   
+//   {
+//       img: "/img/meditacao.png",
+//       title: "Meditação",
+//       category: "Mentalidade",
+//      description: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi sit quia voluptatem",
+//       url: "https://prileiteyoga.com.br/yoga-co/"
+//   },
 
-    {
-        img: "/img/treino.png",
-        title: "Exercícios",
-        category: "Saúde",
-        description: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi sit quia voluptatem",
-        url: "https://www.queimadiaria.com/"
-    },
-    
-    {
-        img: "/img/meditacao.png",
-        title: "Meditação",
-        category: "Mentalidade",
-        description: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi sit quia voluptatem",
-        url: "https://prileiteyoga.com.br/yoga-co/"
-    },
-
-    {
-        img: "/img/karaoke.png",
-        title: "Karaokê",
-        category: "Diversão em família",
-        description: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi sit quia voluptatem",
-        url: "https://www.singsnap.com/"
-    },
-
-]
+//   {
+//       img: "/img/karaoke.png",
+//       title: "Karaokê",
+//       category: "Diversão em família",
+//       description: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi sit quia voluptatem",
+//       url: "https://www.singsnap.com/"
+//   },
+//
+//]
 
 
 // configurar arquivos estáticos (css, scripts, imagens)
@@ -52,26 +48,39 @@ nunjucks.configure("views", {
 
 // criei uma rota/
 // e capturo o pedido do cliente para responder
-server.get("/", function(req, res) {
+server.get("/", function (req, res) {
 
-    const reversedIdeas = [...ideas].reverse()
+    db.all(`SELECT * FROM ideas`, function (err, rows) {
+        if (err) return console.log(err)
 
-    let lastIdeas = []
-    for(let idea of reversedIdeas) {
-       if(lastIdeas.length < 2) {
-           lastIdeas.push(idea)
+        const reversedIdeas = [...rows].reverse()
+
+        let lastIdeas = []
+        for (let idea of reversedIdeas) {
+            if (lastIdeas.length < 2) {
+                lastIdeas.push(idea)
+            }
         }
-    }
 
-    return res.render("../views/index.html", { ideas: lastIdeas })
+        return res.render("../views/index.html", {
+            ideas: lastIdeas
+        })
+    })
+
+
 })
 
-server.get("/ideias", function(req, res) {
+server.get("/ideias", function (req, res) {
 
-    const reversedIdeas = [...ideas].reverse()
+    db.all(`SELECT * FROM ideas`, function (err, rows) {
+        if (err) return console.log(err)
 
-    return res.render("../views/ideias.html", { ideas: reversedIdeas()})
+        const reversedIdeas = [...rows].reverse()
+        return res.render("../views/ideias.html", { ideas: reversedIdeas() })
+
+    })    
 })
 
-// liguei meu servidor na porta 3000
+
+// liguei meu servi]dor na porta 3000
 server.listen(3000)

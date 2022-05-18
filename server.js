@@ -4,8 +4,7 @@ const server = express()
 
 const db = require("./db")
 
-//const ideas = 
-[{
+const ideas = [{
 
     },
 
@@ -116,11 +115,13 @@ INSERT INTO ideas(
 
     ]
 
-
     db.run(query, values, function (err) {
-        if (err) return console.log(err)
+        if (err) {
+            console.log(err)
+            return res.send("Erro no banco de dados!")
+        }
 
-        console.log(this)
+        return res.redirect("/ideias")
     })
 })
 

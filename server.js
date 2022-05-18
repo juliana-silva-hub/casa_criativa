@@ -108,7 +108,12 @@ INSERT INTO ideas(
 `
 
     const values = [
-        
+        req.body.image,
+        req.body.title,
+        req.body.category,
+        req.body.description,
+        req.body.link,
+
     ]
 
 

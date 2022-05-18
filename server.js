@@ -4,44 +4,11 @@ const server = express()
 
 const db = require("./db")
 
-const ideas = [{
-
-    },
-
-    {
-        img: "/img/treino.png",
-        title: "Exercícios",
-        category: "Saúde",
-        description: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi sit quia voluptatem",
-        url: "https://www.queimadiaria.com/"
-    },
-
-    {
-        img: "/img/meditacao.png",
-        title: "Meditação",
-        category: "Mentalidade",
-        description: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi sit quia voluptatem",
-        url: "https://prileiteyoga.com.br/yoga-co/"
-    },
-
-    {
-        img: "/img/karaoke.png",
-        title: "Karaokê",
-        category: "Diversão em família",
-        description: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi sit quia voluptatem",
-        url: "https://www.singsnap.com/"
-    },
-
-]
-
-
 // configurar arquivos estáticos (css, scripts, imagens)
 server.use(express.static("public"))
 
 // habiitar uso do req.body
-server.use(express.urlencoded({
-    extended: true
-}))
+server.use(express.urlencoded({ extended: true }))
 
 // configuração do nunjucks
 const nunjucks = require("nunjucks")

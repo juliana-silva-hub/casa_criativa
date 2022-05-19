@@ -11,7 +11,7 @@ function onOff() {
         .querySelector("#modal")
         .classList
         .toggle("addScroll")
-    
+
 }
 
 function checkFields(event) {
@@ -23,19 +23,19 @@ function checkFields(event) {
         "description",
         "link",
     ]
-    
-   const isEmpty = valuesToCheck.find(function(value) { 
 
-       const checkIfIsString = typeof event.target[value].value === "string"
-       const checkIfIsEmpty = !event.target[value].value.trim()
+    const isEmpty = valuesToCheck.find(function (value) {
 
-       if(checkIfIsString && checkIfIsEmpty) {
-           return true
-       }
-   })
+        const checkIfIsString = typeof event.target[value].value === "string"
+        const checkIfIsEmpty = !event.target[value].value.trim()
 
-   if(isEmpty) {
-       event.preventDefault()
-       alert("Por favor, preencha todos os campos")
-   }
-}   
+        if (checkIfIsString && checkIfIsEmpty) {
+            return true
+        }
+    })
+
+    if (isEmpty) {
+        event.preventDefault()
+        alert("Por favor, preencha todos os campos")
+    }
+}

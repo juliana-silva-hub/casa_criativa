@@ -52,8 +52,7 @@ server.get("/ideias", function (req, res) {
             return res.send("Erro no banco de dados!")
         }
 
-        const reversedIdeas
-        return res.send("OK")[...rows].reverse()
+        const reversedIdeas = [...rows].reverse()
         return res.render("../views/ideias.html", {
             ideas: reversedIdeas()
         })

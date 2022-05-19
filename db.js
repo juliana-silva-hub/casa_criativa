@@ -17,32 +17,32 @@ db.serialize(function () {
 
     // Inserir dados na tabela
     //const query = `
-     //  INSERT INTO ideas(
-     //       image,
-     //       title,
-     //       category,
+    //  INSERT INTO ideas(
+    //        image,
+    //       title,
+    //        category,
     //        description,
-     //      link
+    //       link
    // ) VALUES (?, ?, ?, ?, ?); 
   // `
 
   //  const values = [
-   //     "../public/img/worker.png",
-   //     "Cursos de Programação",
+    //    "../public/img/worker.png",
+    //    "Cursos de Programação",
    //     "Estudo",
    //     "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi sit quia voluptatem",
-  //      "https://rocketseat.com.br"
+   //     "https://rocketseat.com.br"
    // ]
 
 
-   // db.run(query, values, function (err) {
-     //   if (err) return console.log(err)
+  //  db.run(query, values, function (err) {
+  //      if (err) return console.log(err)
 
-    //    console.log(this)
-   // })
+  //      console.log(this)
+  //  })
 
 
-    //Deletar um dado da tabela
+    //Deletar um dado da tabelan
     //db.run(`DELETE FROM ideas WHERE id = ?`, [3], function(err) {
     //   if(err) return console.log(err)
 

@@ -23,23 +23,23 @@ db.serialize(function () {
     //        category,
     //        description,
     //       link
-   // ) VALUES (?, ?, ?, ?, ?); 
-  // `
+    // ) VALUES (?, ?, ?, ?, ?); 
+    // `
 
-  //  const values = [
+    //  const values = [
     //    "../public/img/worker.png",
     //    "Cursos de Programação",
-   //     "Estudo",
-   //     "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi sit quia voluptatem",
-   //     "https://rocketseat.com.br"
-   // ]
+    //     "Estudo",
+    //     "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi sit quia voluptatem",
+    //     "https://rocketseat.com.br"
+    // ]
 
 
-  //  db.run(query, values, function (err) {
-  //      if (err) return console.log(err)
+    //  db.run(query, values, function (err) {
+    //      if (err) return console.log(err)
 
-  //      console.log(this)
-  //  })
+    //      console.log(this)
+    //  })
 
 
     //Deletar um dado da tabelan
@@ -58,7 +58,7 @@ db.serialize(function () {
     //       console.log(rows)
     //   })
 
-})
+    })
 
 
-module.exports = db
+    module.exports = db

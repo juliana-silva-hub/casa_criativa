@@ -8,7 +8,9 @@ const db = require("./db")
 server.use(express.static("public"))
 
 // habiitar uso do req.body
-server.use(express.urlencoded({ extended: true }))
+server.use(express.urlencoded({
+    extended: true
+}))
 
 // configuração do nunjucks
 const nunjucks = require("nunjucks")
@@ -22,23 +24,23 @@ nunjucks.configure("views", {
 server.get("/", function (req, res) {
 
     db.all(`SELECT * FROM ideas`, function (err, rows) {
-        if (err) {
-            console.log(err)
-            return res.send("Erro no banco de dados!")
-        }
-
-        const reversedIdeas = [...rows].reverse()
-
-        let lastIdeas = []
-        for (let idea of reversedIdeas) {
-            if (lastIdeas.length < 2) {
-                lastIdeas.push(idea)
+            if (err) {
+                console.log(err)
+                return res.send("Erro no banco de dados!")
             }
-        }
 
-        return res.render("../views/index.html", {
-            ideas: lastIdeas
-        })
+            const reversedIdeas = [...rows].reverse()
+
+            let lastIdeas = []
+            for (let idea of reversedIdeas) {
+                if (lastIdeas.length < 2) {
+                    lastIdeas.push(idea)
+                }
+            }
+
+            return res.render("../views/index.html", {
+                ideas: lastIdeas
+            })
     })
 
 

@@ -4,11 +4,16 @@ O projeto Casa Criativa é uma plataforma para cadastro de ideias que possam aju
 
 
 # Tecnologias Utilizadas:
+## Front-end
 <li>HTML5</li>
 <li>CSS3</li>
 <li>JavaScript</li>
-<li>Node.js</li>
-<li>Expressar</li>
-<li>Nunjucks</li>
-<li>SQL</li>
 
+## Back-end
+<li>Node.js</li>
+<li>SQLite3</li>
+
+## Dependências
+<li>Express</li>
+<li>Nunjucks</li>
+<li>Nodemon</li>

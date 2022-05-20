@@ -15,48 +15,48 @@ db.serialize(function () {
         );
     `)
 
-    // Inserir dados na tabela
-    //const query = `
-    //  INSERT INTO ideas(
-    //        image,
-    //       title,
-    //        category,
-    //        description,
-    //       link
-    // ) VALUES (?, ?, ?, ?, ?); 
-    // `
+     //Inserir dados na tabela
+    const query = `
+      INSERT INTO ideas(
+            image,
+           title,
+           category,
+            description,
+           link
+     ) VALUES (?, ?, ?, ?, ?); 
+     `
 
-    //  const values = [
-    //    "../public/img/worker.png",
-    //    "Cursos de Programação",
-    //     "Estudo",
-    //     "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi sit quia voluptatem",
-    //     "https://rocketseat.com.br"
-    // ]
+      const values = [
+        "../public/img/worker.png",
+        "Cursos de Programação",
+         "Estudo",
+         "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi sit quia voluptatem",
+         "https://rocketseat.com.br"
+     ]
 
 
-    //  db.run(query, values, function (err) {
-    //      if (err) return console.log(err)
+      db.run(query, values, function (err) {
+          if (err) return console.log(err)
 
-    //      console.log(this)
-    //  })
+          console.log(this)
+      })
 
 
     //Deletar um dado da tabelan
-    //db.run(`DELETE FROM ideas WHERE id = ?`, [3], function(err) {
-    //   if(err) return console.log(err)
+    db.run(`DELETE FROM ideas WHERE id = ?`, [3], function(err) {
+       if(err) return console.log(err)
 
-    //    console.log("DELETEI", this)
-    // })
+        console.log("DELETEI", this)
+     })
 
 
 
     //Consultar dados na tabela
-    //   db.all(`SELECT * FROM ideas`, function(err, rows) {
-    //       if(err) return console.log(err)
+       db.all(`SELECT * FROM ideas`, function(err, rows) {
+           if(err) return console.log(err)
 
-    //       console.log(rows)
-    //   })
+           console.log(rows)
+       })
 
     })
 
